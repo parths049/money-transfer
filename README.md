@@ -17,10 +17,10 @@ mvn exec:java
 
 Application starts a jetty server on localhost port 8080 An H2 in memory database initialized with some sample user and account data To view
 
-http://localhost:8080/user/test1
-http://localhost:8080/user/test2
-http://localhost:8080/account/1
-http://localhost:8080/account/2
+- http://localhost:8080/user/test1
+- http://localhost:8080/user/test2
+- http://localhost:8080/account/1
+- http://localhost:8080/account/2
 
 ### Available Services
 
