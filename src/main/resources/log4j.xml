@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+
+    <appender class="org.apache.log4j.RollingFileAppender" name="FILE">
+        <param name="File" value="logs/moneyapp.log"/>
+        <param name="Threshold" value="debug"/>
+        <param name="Append" value="true"/>
+        <param name="MaxFileSize" value="5MB"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d [%t] [%-5p] [%c{1}] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+        </layout>
+    </appender>
+
+
+    <logger name="com.taskforce.moneyapp" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <root>
+        <level value="ERROR"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</log4j:configuration>
